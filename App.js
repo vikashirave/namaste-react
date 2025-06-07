@@ -1,28 +1,21 @@
-/**
- * <div id="parent">
-    <div id="child">
-      <h1>i am h1 tag</h1>
-      <h2>i am h2 tag</h2>
-    </div>
-    <div id="child">
-      <h1>i am h1 tag</h1>
-      <h2>i am h2 tag</h2>
-    </div>
-  </div>
- *
- */
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "i am h1 tag"),
-    React.createElement("h1", {}, "i am h2 tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "i am h1 tag"),
-    React.createElement("h1", {}, "i am h2 tag"),
-  ]),
-]);
-console.log("heading:-- ", heading);
+// React Element.
+const Title = () => (
+  <h1 className="title" tabIndex="8">
+    Namste React functional compostition.
+  </h1>
+);
+
+const jsxtext = (
+  <div id="container">
+    <Title />
+    <h1 className="head" tabIndex="5">
+      Namste react using jsx
+    </h1>
+  </div>
+);
+console.log(jsxtext);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-console.log("root:-- ", root);
-root.render(heading);
+root.render(jsxtext);
