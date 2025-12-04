@@ -66,10 +66,23 @@ beacause every time re render its declare the variable again with updated value 
 
 
 # useEffect
+
+useEffect(() => {
+    //code
+}, [//dep array]);
+
 // if not dependency array => useEffect called on every render.
 // if dependecny array is empty = [] => useEffect is called on initial render (just once).
 // if dependancy array is [btnNameReact] => called everytime [btnNameReact] updated.
 
+# useStata
+always create useState inside functional component.
+always declare it in top. its good practice.
+never create useState inside if else conditions. it will work but not a good practice.
+
 # 2 types of routing
 client side routing - react is an cilent side routing
 server side routing - make call to server side route then after getting the response load the page
+
+# why we write super props inside constructor? 
+- We write super(props) so React’s parent class is initialized with props, and so we can safely use this.props and this.state inside a class component.
